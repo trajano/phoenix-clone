@@ -1,6 +1,7 @@
 ﻿init python:
     import magic
     sshake = magic.Shake((0, 0, 0, 0), 0.5, dist=15)
+    flash = Fade(.25, 0, .75, color="#fff")
 
 image bg meadow = "meadow.jpg"
 image bg uni = "uni.jpg"
@@ -60,6 +61,6 @@ label hentai:
 
 label marry:
     scene black
-    with dissolve
+    with flash
 
     "--- years later ---"
