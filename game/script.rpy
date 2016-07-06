@@ -1,5 +1,6 @@
 ﻿init python:
     import magic
+    sshake = magic.Shake((0, 0, 0, 0), 0.5, dist=15)
 
 image bg meadow = "meadow.jpg"
 image bg uni = "uni.jpg"
@@ -15,12 +16,13 @@ label start:
     show sylvie smile
 
     s "Oh, hi, do we walk home together?"
-    m "Yes..."
+    m "Yes..." with sshake
     "I said and my voice was already shaking."
-
+    
     $ result = magic.add(1, 2)
 
     "1 + 2 = %(result)d"
+    with magic.Shake((0, 0, 0, 0), 3.0, dist=30)
 
     scene bg meadow
     with fade
@@ -30,7 +32,7 @@ label start:
     "When we were children, we often played here."
     m "Hey... ummm..."
 
-    show sylvie smile at right
+    show sylvie smile at right, magic.Shake(None, 1.0, dist=5)
     with dissolve
 
     "She turned to me and smiled."
