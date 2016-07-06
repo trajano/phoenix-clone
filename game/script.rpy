@@ -8,12 +8,14 @@ image bg uni = "uni.jpg"
 image sylvie smile = "sylvie_smile.png"
 image sylvie surprised = "sylvie_surprised.png"
 
-define s = Character('Sylvie', color="#c8ffc8")
+define s = DynamicCharacter('sylvie', color="#c8ffc8")
 define m = Character('Me', color="#c8c8ff")
 
 label start:
     scene bg uni
     show sylvie smile
+
+    $ sylvie = "Girl"
 
     s "Oh, hi, do we walk home together?"
     m "Yes..." with sshake
@@ -28,7 +30,8 @@ label start:
     with fade
 
     "We reached the meadows just outside our hometown."
-    "Autumn was so beautiful here."
+    $ sylvie = "Sylvie"
+    s "Autumn was so beautiful here."
     "When we were children, we often played here."
     m "Hey... ummm..."
 
