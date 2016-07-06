@@ -1,4 +1,7 @@
-﻿image bg meadow = "meadow.jpg"
+﻿init python:
+    import magic
+
+image bg meadow = "meadow.jpg"
 image bg uni = "uni.jpg"
 
 image sylvie smile = "sylvie_smile.png"
@@ -14,6 +17,10 @@ label start:
     s "Oh, hi, do we walk home together?"
     m "Yes..."
     "I said and my voice was already shaking."
+
+    $ result = magic.add(1, 2)
+
+    "1 + 2 = %(result)d"
 
     scene bg meadow
     with fade
